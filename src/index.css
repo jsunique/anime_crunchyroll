@@ -1,2 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "crunchyroll";
+  default: true;
+  color-scheme: dark;
+
+  --color-primary: #F47521;
+  --color-secondary: #D9D9D9;
+
+  --color-base-100: #0F0F0F;
+  --color-base-200: #181818;
+  --color-base-content: #EAEAEA;
+
+  --color-neutral-content: #A3A3A3;
+}
