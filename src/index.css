@@ -39,5 +39,6 @@
 }
 @theme{
   --font-pop : "poppins";
-  --font-header : "header"
+  --font-header : "header";
+  --breakpoint-850 : 850px;
 }

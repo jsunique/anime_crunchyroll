@@ -24,11 +24,19 @@ export default function Hero() {
       <div className='h-[calc(100vh-5rem)] w-full'></div>
       :
       <div className='relative h-[calc(100vh-5rem)] w-full'>
-        <div className='absolute inset-0'> 
-          <img src={data[0].attributes.coverImage.original} className='w-full h-full object-cover bg-center' />
-        </div>
+{/* layeye aks */}
+        <div className='absolute inset-0 flex justify-center items-center w-full'> 
+          <img src={data[0].attributes.posterImage.original} className='w-full h-130 object-contain  850:hidden ' />
+          <img src={data[0].attributes.coverImage.original} className='hidden 850:block w-full h-full object-cover' />
 
-        <div className='absolute inset-0 bg-linear-to-r from-black via-black/60 to-transparent'></div>
+        </div>
+{/* layeye gradient */}
+        <div className='absolute inset-0 bg-linear-to-r from-black via-black/60 to-transparent'></div> 
+
+{/* layeye text */}
+          <div className='absolute z-10'>
+            <p className='absolute right-1 bottom-0'>vahid yazdani</p>
+          </div>
       </div>
       }
     </>
