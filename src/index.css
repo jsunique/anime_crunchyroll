@@ -4,13 +4,40 @@
   name: "crunchyroll";
   default: true;
   color-scheme: dark;
-
   --color-primary: #F47521;
   --color-secondary: #D9D9D9;
-
-  --color-base-100: #0F0F0F;
-  --color-base-200: #181818;
+  --color-base-100: #141414;
+  --color-base-200: #1D1D1D;
   --color-base-content: #EAEAEA;
-
   --color-neutral-content: #A3A3A3;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/fonts/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "header";
+  src: url("./assets/fonts/BerkshireSwash-Regular.ttf");
+  font-weight: 400;
+}
+@theme{
+  --font-pop : "poppins";
+  --font-header : "header"
 }
