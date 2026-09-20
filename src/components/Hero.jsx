@@ -11,6 +11,20 @@ export default function Hero() {
     sendRequest();
   },[]);
 
+  
+  useEffect(()=>{
+   const timer =  setInterval(() => {
+      setCurrentSlider(prev =>{
+        if(prev === data.length-1){
+          return 0
+        }
+        return prev + 1 
+      });
+    }, 5000);
+      return()=> clearInterval(timer)
+
+  },[data.length])
+
   const sendRequest = async ()=>{
     const data = await fetch(url);
     const respose = await data.json();
