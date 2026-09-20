@@ -35,8 +35,9 @@ export default function Hero() {
         <div className='absolute inset-0 bg-linear-to-l from-black via-black/10 to-transparent'></div> 
 
 {/* layeye text */}
-          <div className='absolute inset-0 z-10'>
-            <p className='absolute right-1'></p>
+          <div className='absolute inset-0 z-10  flex justify-center'>
+            <p className='absolute top-8 font-header text-2xl drop-shadow-2xl text-base-content bg-[#0f0f0fb2]  850:text-4xl'>{data[0].attributes.canonicalTitle}</p>
+            <button className='absolute btn btn-primary bottom-10 cursor-pointer 850:p-5 850:text-xl font-pop'>watch now</button>
           </div>
       </div>
       }
