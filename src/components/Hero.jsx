@@ -57,18 +57,18 @@ export default function Hero() {
       :
       <div className='relative h-[calc(100vh-5rem)] w-full'>
 {/* layeye aks */}
-        <div className='absolute inset-0 flex justify-center items-center w-full'> 
-          <img src={data[currentSlider].attributes.posterImage.original} className='w-full h-full object-contain  850:hidden right-0 ' />
-          <img src={data[currentSlider].attributes.coverImage.original} className='hidden 850:block w-full h-full object-cover' />
+        <div className='absolute inset-0 block w-full'> 
+          <img  src={data[currentSlider].attributes.posterImage.original} className='w-full h-full object-contain  850:hidden right-0   ' />
+          <img  src={data[currentSlider].attributes.coverImage.original} className='hidden 850:block w-full h-full object-cover animate-[fadeIn_0.8s_ease-in]' />
 
         </div>
 {/* layeye gradient */}
-        <div className='absolute inset-0 bg-linear-to-r from-black via-black/10 to-transparent'></div> 
-        <div className='absolute inset-0 bg-linear-to-l from-black via-black/10 to-transparent'></div> 
+        <div className='absolute inset-0 bg-linear-to-r from-black via-black/1 to-transparent'></div> 
+        <div className='absolute inset-0 bg-linear-to-l from-black via-black/1 to-transparent'></div> 
 
 {/* layeye text */}
           <div className='absolute inset-0 z-10  flex justify-center'>
-            <p className='absolute top-8 font-header text-2xl drop-shadow-2xl text-base-content bg-[#0f0f0fb2]  850:text-4xl'>{data[currentSlider].attributes.canonicalTitle}</p>
+            <p className='absolute top-8 font-header text-xl drop-shadow-2xl text-base-content bg-[#0f0f0fb2]  850:text-4xl'>{data[currentSlider].attributes.canonicalTitle}</p>
             <button className='absolute btn btn-primary bottom-10 cursor-pointer 850:p-5 850:text-xl font-pop'>watch now</button>
             <button onClick={nextSlider} className='absolute  p-2 bg-white/10 rounded-[100%] right-10 top-1/2 backdrop-blur-xl border border-white/20 cursor-pointer'>
               <ArrowRight strokeWidth={3} size={25} className='text-white font-bold' /></button>

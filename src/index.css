@@ -42,3 +42,11 @@
   --font-header : "header";
   --breakpoint-850 : 850px;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
