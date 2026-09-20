@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {ArrowRight , ArrowLeft} from 'lucide-react'
 const url = `https://kitsu.io/api/edge/anime?page[limit]=5&sort=-averageRating`
 
 export default function Hero() {
@@ -38,6 +39,9 @@ export default function Hero() {
           <div className='absolute inset-0 z-10  flex justify-center'>
             <p className='absolute top-8 font-header text-2xl drop-shadow-2xl text-base-content bg-[#0f0f0fb2]  850:text-4xl'>{data[0].attributes.canonicalTitle}</p>
             <button className='absolute btn btn-primary bottom-10 cursor-pointer 850:p-5 850:text-xl font-pop'>watch now</button>
+            <button className='absolute  p-2 bg-white/10 rounded-[100%] right-10 top-1/2 backdrop-blur-xl border border-white/20 cursor-pointer'>
+              <ArrowRight strokeWidth={3} size={25} className='text-white font-bold' /></button>
+            <button className='absolute  p-2 bg-white/10 rounded-[100%] left-10 top-1/2 backdrop-blur-xl border border-white/20 cursor-pointer'><ArrowLeft strokeWidth={3} size={25} className='text-white font-bold' /></button>
           </div>
       </div>
       }
