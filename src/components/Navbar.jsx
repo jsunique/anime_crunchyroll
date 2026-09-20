@@ -22,7 +22,6 @@ export default function Navbar() {
 
 <>
     <nav className='sticky top-0 z-50 h-20 w-full flex justify-between items-center bg-base-200 '>
-
       <div className='flex  items-center gap-5 px-4  sm:hidden'>
         {
           hamburgerMenu ? 
@@ -39,7 +38,6 @@ export default function Navbar() {
         }
         <img src={logo} className='w-10 h-10 cursor-pointer' />
       </div>
-
       <div className='hidden  items-center gap-5 px-4  sm:flex'>
         <div className='flex items-center gap-2'>
           <img src={logo} className='w-10 h-10 cursor-pointer' />
@@ -48,21 +46,12 @@ export default function Navbar() {
           <Link to="/animes" className='text-base-content font-pop font-semibold text-xl px-4 py-4 hover:text-primary'>Genres</Link>
         </div>
       </div>
-
-
-
-
-
-
-
-
       <div className='flex items-center gap-6 px-4  sm:gap-10 md:gap-15'>
         <LogIn size={33} className='text-primary hover:text-base-content transition-colors cursor-pointer' />
         <Search size={33} className='text-neutral-content hover:text-base-content transition-colors cursor-pointer' />
         <Palette size={33} className='text-neutral-content hover:text-base-content transition-colors cursor-pointer' />
       </div>
     </nav>
-    <div className='w-full h-[200vh]'></div>
 </>
 
   )
