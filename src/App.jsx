@@ -1,25 +1,37 @@
 import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import AnimeRow from "./components/AnimeRow"
-
+import Home from "./components/Home"
+import { Routes , Route } from "react-router"
+import AnimeDetail from "./components/AnimeDetail"
+import Login from "./components/Login"
+import ProtectedRoute from "./components/ProtectedRoute"
+import Search from "./components/Search"
+import Genres from "./components/Genres"
+import All from "./components/All"
+import TopRated from "./components/TopRated"
+import Recently from "./components/Recently"
+import Popular from "./components/Popular"
+import NotFound from "./NotFound"
 function App() {
 
   return (
     <>
     <Navbar />
-    <Hero />
-    <AnimeRow title="Popular" url="https://kitsu.io/api/edge/anime?page[limit]=20&sort=popularityRank" />
-    <AnimeRow title="Top rated" url="https://kitsu.io/api/edge/anime?page[limit]=20&sort=-averageRating" />
-    <AnimeRow title="Recently" url="https://kitsu.io/api/edge/anime?page[limit]=20&sort=-updatedAt
-" />
-    <AnimeRow title="Action"
-      url="https://kitsu.io/api/edge/anime?filter[categories]=action&page[limit]=20&sort=-averageRating"
-    />
-    <AnimeRow title="Slice of life"
-    url="https://kitsu.io/api/edge/anime?filter[categories]=slice-of-life&page[limit]=20&sort=-averageRating"
-  />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    <Route element={<ProtectedRoute />} >
+      <Route path="/anime/:animeId" element={<AnimeDetail />} />
+      <Route path="/search" element={<Search />} />
+      <Route path="/genres" element={<Genres />} />
+      <Route path="/toprated" element={<TopRated />} />
+      <Route path="/all" element={<All />} />
+      <Route path="/popular" element={<Popular />} />
+      <Route path="/recently" element={<Recently />} />
+    </Route>
+    <Route path="*" element={<NotFound />} />
+    </Routes>
     </>
-  )
+  ) 
 }
 
 export default App
