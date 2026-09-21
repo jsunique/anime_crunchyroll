@@ -30,10 +30,10 @@ export default function Popular() {
        <div className='px-5 flex w-full  flex-nowrap gap-3 overflow-scroll no-scrollbar'>
         {
           data.map((item)=>(
-            <div className='flex flex-col py-5 w-[50%] max-w-52 shrink-0 gap-2 h-120'>
-              <img src={item.attributes.posterImage.original} className='w-full h-[60%] max-h-80' />
-              <p className='text-base-content font-pop text-xs font-bold'>{item.attributes.titles.en}</p>
-              <p className='font-pop text-[10px] text-neutral-content font-semibold'>{item.attributes.slug}</p>
+            <div key={item.id} className='flex flex-col py-5 w-[50%] max-w-52 shrink-0 gap-2 h-120'>
+              <img src={item.attributes.posterImage.original} className='w-full h-[55%] max-h-80' />
+              <p className='text-base-content font-pop text-xs font-bold sm:text-[16px] sm:font-medium'>{item.attributes.titles.en}</p>
+              <p className='font-pop text-[10px] text-neutral-content font-semibold sm:text-[14px]'>{item.attributes.slug}</p>
             </div>
           ))
         }
