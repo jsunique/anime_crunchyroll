@@ -38,6 +38,14 @@ export default function AnimeDetail() {
         <p className='text-primary text-center text-2xl font-header mt-3 sm:text-3xl md:text-5xl'>{data.attributes.canonicalTitle}</p>
       <p className='text-center px-10 font-pop sm:font-medium md:font-bold mx-auto mt-5 max-w-4xl leading-7 text-white/70'>{data.attributes.synopsis}</p>
       </div>
+      <div className='flex flex-wrap items-center gap-4 justify-center'>
+        <span className='badge badge-primary font-pop'>{data.attributes.averageRating}</span>
+        <span className='badge badge-primary font-pop'>{data.attributes.subtype}</span>
+        <span className='badge badge-primary font-pop'>{data.attributes.episodeCount}</span>
+        <span className='badge badge-primary font-pop'>{data.attributes.status}</span>
+        <span className='badge badge-primary font-pop'>{data.attributes.startDate}</span>
+        <span className='badge badge-primary font-pop'>{data.attributes.endDate}</span>
+      </div>
       </>
       }
 
