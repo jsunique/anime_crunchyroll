@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {Link } from "react-router"
 export default function AnimeRow({title,url}) {
   const [data , setData] = useState([]);
   const [loading , isLoading] = useState(true);
@@ -25,11 +26,11 @@ export default function AnimeRow({title,url}) {
        <div className='px-5 flex w-full  flex-nowrap gap-3 overflow-scroll no-scrollbar'>
         {
           data.map((item)=>(
-            <div key={item.id} className='flex flex-col py-5 w-[50%] max-w-52 shrink-0 gap-2 h-100'>
+            <Link to={`/anime/${item.id}`}  key={item.id} className='flex flex-col py-5 w-[50%] max-w-52 shrink-0 gap-2 h-100'>
               <img src={item.attributes.posterImage.original} className='w-full h-[70%] max-h-70' />
               <p className='text-base-content font-pop text-xs font-bold sm:text-[16px] sm:font-medium'>{item.attributes.titles.en}</p>
               <p className='font-pop text-[10px] text-neutral-content font-semibold sm:text-[14px]'>{item.attributes.slug}</p>
-            </div>
+            </Link>
           ))
         }
        </div>
