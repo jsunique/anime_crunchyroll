@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import Popular from "./components/Popluar"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
     <Navbar />
     <Hero />
+    <Popular />
     </>
   )
 }
