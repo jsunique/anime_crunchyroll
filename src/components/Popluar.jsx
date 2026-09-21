@@ -24,14 +24,14 @@ export default function Popular() {
     :
     <div className='flex flex-col mt-5'>
       <div className='flex  justify-between px-5'>
-        <h2 className='text-base-content font-bold font-pop' >Popular</h2>
-        <p className='font-semibold font-pop text-primary cursor-pointer hover:underline'>see more</p>
+        <h2 className='text-base-content font-bold font-pop text-2xl' >Popular</h2>
+        <p className='font-semibold font-pop text-primary cursor-pointer hover:underline text-2xl'>see more</p>
       </div>
-       <div className='px-5 flex w-full  flex-nowrap gap-3 overflow-scroll'>
+       <div className='px-5 flex w-full  flex-nowrap gap-3 overflow-scroll no-scrollbar'>
         {
           data.map((item)=>(
-            <div className='flex flex-col py-5 w-[50%]  shrink-0 gap-2'>
-              <img src={item.attributes.posterImage.original} className='w-full h-50' />
+            <div className='flex flex-col py-5 w-[50%] max-w-52 shrink-0 gap-2 h-120'>
+              <img src={item.attributes.posterImage.original} className='w-full h-[60%] max-h-80' />
               <p className='text-base-content font-pop text-xs font-bold'>{item.attributes.titles.en}</p>
               <p className='font-pop text-[10px] text-neutral-content font-semibold'>{item.attributes.slug}</p>
             </div>
@@ -41,6 +41,7 @@ export default function Popular() {
 
     </div>
 }
+<div className='w-full h-[50vh]'></div>
     </>
   )
 }
