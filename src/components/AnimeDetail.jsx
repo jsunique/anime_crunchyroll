@@ -23,20 +23,24 @@ export default function AnimeDetail() {
       isLoading ? 
       <p>vahdi yazdani</p>
       :
+      <>
       <div className='relative h-[calc(100vh-5rem)] w-full'>
-{/* layeye aks */}
         <div className='absolute inset-0 block w-full'> 
           <img  src={data.attributes.posterImage.original} className='w-full h-full object-contain  850:hidden right-0   ' />
           <img  src={data.attributes.coverImage.original} className='hidden 850:block w-full h-full object-cover animate-[fadeIn_0.8s_ease-in]' />
 
         </div>
-{/* layeye gradient */}
         <div className='absolute inset-0 bg-linear-to-r from-black via-black/1 to-transparent'></div> 
         <div className='absolute inset-0 bg-linear-to-l from-black via-black/1 to-transparent'></div> 
-
-{/* layeye text */}
       </div>
+
+      <div className='flex flex-col mx-auto max-w-6xl px-5 py-10'>
+        <p className='text-primary text-center text-2xl font-header mt-3 sm:text-3xl md:text-5xl'>{data.attributes.canonicalTitle}</p>
+      <p className='text-center px-10 font-pop sm:font-medium md:font-bold mx-auto mt-5 max-w-4xl leading-7 text-white/70'>{data.attributes.synopsis}</p>
+      </div>
+      </>
       }
+
           </>
   )
 }
