@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Link } from "react-router"
-export default function AnimeRow({title,url}) {
+export default function AnimeRow({title,url , address}) {
   const [data , setData] = useState([]);
   const [loading , isLoading] = useState(true);
   const sendRequest =async ()=>{
@@ -21,7 +21,9 @@ export default function AnimeRow({title,url}) {
     <div className='flex flex-col mt-5'>
       <div className='flex  justify-between px-5'>
         <h2 className='text-base-content font-bold font-pop text-2xl' >{title}</h2>
+        <Link to={address}>
         <p className='font-semibold font-pop text-primary cursor-pointer hover:underline text-2xl'>see more</p>
+        </Link>
       </div>
        <div className='px-5 flex w-full  flex-nowrap gap-3 overflow-scroll no-scrollbar'>
         {
