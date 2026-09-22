@@ -68,10 +68,10 @@ export default function Hero() {
         <div className='absolute inset-0 bg-linear-to-l from-black via-black/1 to-transparent'></div> 
 
 {/* layeye text */}
-          <div className='absolute inset-0 z-10  flex justify-center'>
+          <div className='absolute inset-0 z-10  flex justify-center '>
             <p className='absolute top-8 font-header text-xl drop-shadow-2xl text-base-content bg-[#0f0f0fb2]  850:text-4xl'>{data[currentSlider].attributes.canonicalTitle}</p>
             <Link to={`anime/${data[currentSlider].id}`}>
-            <button className='absolute btn btn-primary bottom-10 cursor-pointer 850:p-5 850:text-xl font-pop'>watch now</button>
+            <button className='absolute left-1/2 -translate-x-1/2 btn btn-primary bottom-10 cursor-pointer 850:p-5 850:text-xl font-pop'>watch now</button>
             </Link>
             <button onClick={nextSlider} className='absolute  p-2 bg-white/10 rounded-[100%] right-10 top-1/2 backdrop-blur-xl border border-white/20 cursor-pointer'>
               <ArrowRight strokeWidth={3} size={25} className='text-white font-bold' /></button>
