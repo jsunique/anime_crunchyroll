@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import AnimeRow from './AnimeRow';
 export default function AnimeDetail() {
   const {animeId} = useParams();
   const [data, setData] = useState(null);
   const [isLoading , setIsloading] = useState(true);
 
   const url = `https://kitsu.io/api/edge/anime/${animeId}`
+  const related = `https://kitsu.io/api/edge/anime/${animeId}?include=mediaRelationships.destination`
 
   const sendRequest = async ()=>{
     const request = await fetch(url);
     const response = await request.json();
     setData(response.data);
     setIsloading(false);
+
   }
   useEffect(()=>{
     sendRequest();
+
   },[animeId])
 
 
@@ -35,9 +39,9 @@ export default function AnimeDetail() {
 
 
 
-      <div className='absolute flex flex-col mx-auto w-full top-1 sm:top-1/2'>
+      <div className='absolute flex flex-col mx-auto w-full top-1'>
         <p className='text-primary text-center text-2xl font-header mt-3 sm:text-3xl md:text-5xl'>{data.attributes.canonicalTitle}</p>
-      <p className='text-center px-10 font-pop sm:font-medium md:font-bold mx-auto mt-5 max-w-4xl leading-7 text-white/70'>{data.attributes.synopsis}</p>
+      <p className='text-center px-10 font-pop text-xs sm:font-medium md:font-bold mx-auto mt-5 h-56.5 overflow-hidden '>{data.attributes.synopsis}</p>
       </div>
       <div className='bottom-5  absolute flex flex-wrap gap-4 w-full justify-center '>
         <span className='badge badge-primary font-pop'>{data.attributes.averageRating}</span>
@@ -47,17 +51,7 @@ export default function AnimeDetail() {
         <span className='badge badge-primary font-pop'>{data.attributes.startDate}</span>
         <span className='badge badge-primary font-pop'>{data.attributes.endDate}</span>
       </div>
-
-
-
-
-
       </div>
-
-
-
-
-
       </>
       }
 
