@@ -26,8 +26,10 @@ export default function Recently() {
   return (
     <>
     {
-      isLoading ? 
-      <p>vhaid yazdani</p>
+      isLoading ?       
+      <div className='flex justify-center h-screen w-full items-center'> 
+        <span className="loading loading-spinner loading-lg "></span>
+      </div>
       :
       <>
             <div className='relative h-[calc(100vh-5rem)] w-full '>

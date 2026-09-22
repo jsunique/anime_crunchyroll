@@ -25,7 +25,9 @@ export default function AnimeDetail() {
   return (
     <>{
       isLoading ? 
-      <p>vahdi yazdani</p>
+      <div className='flex justify-center h-screen w-full items-center'> 
+        <span className="loading loading-spinner loading-lg "></span>
+      </div>
       :
       <>
       <div className='relative h-[calc(100vh-5rem)] w-full '>

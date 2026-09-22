@@ -16,7 +16,9 @@ export default function AnimeRow({title,url , address}) {
   return (
     <>
     {loading ? 
-    <p>vahid yazdani</p>
+    <div className='flex justify-center h-screen w-full items-center'> 
+      <span className="loading loading-spinner loading-lg "></span>
+    </div>
     :
     <div className='flex flex-col mt-5'>
       <div className='flex  justify-between px-5'>
