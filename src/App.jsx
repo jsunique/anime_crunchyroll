@@ -22,7 +22,7 @@ function App() {
     <Route element={<ProtectedRoute />} >
       <Route path="/anime/:animeId" element={<AnimeDetail />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/genres" element={<Genres />} />
+      <Route path="/genres/:genresName" element={<Genres />} />
       <Route path="/toprated" element={<TopRated />} />
       <Route path="/all" element={<All />} />
       <Route path="/popular" element={<Popular />} />
