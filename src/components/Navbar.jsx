@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/images/logo.png'
-import {Menu , Search , Palette , LogIn  , X} from "lucide-react"
+import {Menu , Search , Palette , User  , X} from "lucide-react"
 import {Link} from "react-router"
 
 
@@ -52,7 +52,7 @@ export default function Navbar() {
       </div>
       <div className='flex items-center gap-6 px-4  sm:gap-10 md:gap-15'>
         <Link to='/login'>
-        <LogIn size={33} className='text-primary hover:text-base-content transition-colors cursor-pointer' />
+        <User size={33} className='text-primary hover:text-base-content transition-colors cursor-pointer' />
         </Link>
         <Link to="/search">
         <Search size={33} className='text-neutral-content hover:text-base-content transition-colors cursor-pointer' />
