@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../auth/AuthProvider';
+import { useNavigate } from 'react-router';
 
 export default function Login() {
 const [password , setPassword] = useState('');
@@ -9,11 +10,13 @@ const user = {
   username: "vahid",
   password: "1234"
 };
+const navigate = useNavigate();
 const handleClick = ()=>{
   if (username === user.username  && password === user.password) {
 
     localStorage.setItem("user" ,JSON.stringify(user));
     setIsAuthenticated(true);
+    navigate('/')
     setPassword('');
     setUsername('');
   }else{

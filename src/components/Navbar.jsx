@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { useAuth } from '../auth/AuthProvider'
 import logo from '../assets/images/logo.png'
-import {Menu , Search , Palette , User  , X} from "lucide-react"
+import {Menu , Search , Palette , User  , X ,UserRoundArrowLeft} from "lucide-react"
 import {Link} from "react-router"
 
 
@@ -8,6 +9,11 @@ import {Link} from "react-router"
 export default function Navbar() {
 
   const [hamburgerMenu , setHamburgerMenu] = useState(false);
+  const {isAuthenticated, setIsAuthenticated} = useAuth();
+    const handleLogout = ()=>{
+      localStorage.removeItem('user');
+      setIsAuthenticated(false) 
+  }
   const handleClick = ()=>{
     setHamburgerMenu(!hamburgerMenu);
   }
@@ -51,9 +57,13 @@ export default function Navbar() {
         </div>
       </div>
       <div className='flex items-center gap-6 px-4  sm:gap-10 md:gap-15'>
+        {isAuthenticated ?
+        <UserRoundArrowLeft onClick={handleLogout} />
+        :
         <Link to='/login'>
         <User size={33} className='text-primary hover:text-base-content transition-colors cursor-pointer' />
         </Link>
+}
         <Link to="/search">
         <Search size={33} className='text-neutral-content hover:text-base-content transition-colors cursor-pointer' />
         </Link>
