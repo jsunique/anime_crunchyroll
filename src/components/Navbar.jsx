@@ -47,7 +47,7 @@ export default function Navbar() {
           </Link>
           <Link to="/all" className='text-base-content font-pop font-semibold text-xl px-4 py-4 hover:text-primary'>Anime</Link>
           <Link to="/toprated" className='text-base-content font-pop font-semibold text-xl px-4 py-4 hover:text-primary'>Top rated</Link>
-          <Link to="/genres" className='text-base-content font-pop font-semibold text-xl px-4 py-4 hover:text-primary'>Genres</Link>
+          <Link to="/genres/horror" className='text-base-content font-pop font-semibold text-xl px-4 py-4 hover:text-primary'>Genres</Link>
         </div>
       </div>
       <div className='flex items-center gap-6 px-4  sm:gap-10 md:gap-15'>
