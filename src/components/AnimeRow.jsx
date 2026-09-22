@@ -36,7 +36,6 @@ export default function AnimeRow({title,url , address}) {
           ))
         }
        </div>
-
     </div>
 }
     </>
